@@ -52,7 +52,7 @@
   }
 }
 
-#root {
+#root:not(.dashboard) {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
@@ -68,14 +68,14 @@ body {
   margin: 0;
 }
 
-h1,
-h2 {
+#root:not(.dashboard) h1,
+#root:not(.dashboard) h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
 }
 
-h1 {
+#root:not(.dashboard) h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
@@ -84,7 +84,7 @@ h1 {
     margin: 20px 0;
   }
 }
-h2 {
+#root:not(.dashboard) h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
@@ -93,11 +93,11 @@ h2 {
     font-size: 20px;
   }
 }
-p {
+#root:not(.dashboard) p {
   margin: 0;
 }
 
-code,
+#root:not(.dashboard) code,
 .counter {
   font-family: var(--mono);
   display: inline-flex;
@@ -105,9 +105,19 @@ code,
   color: var(--text-h);
 }
 
-code {
+#root:not(.dashboard) code {
   font-size: 15px;
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+#root.dashboard {
+  width: 100%;
+  max-width: none;
+  text-align: left;
+  border-inline: none;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 16px;
 }
